@@ -1,0 +1,223 @@
+1.What are Semantic Elements?
+A semantic element clearly describes its meaning to both the browser and the developer.
+Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+
+examples:
+          <article>
+          <aside>
+          <details>
+          <figcaption>
+          <figure>
+          <footer>
+          <header>
+          <main>
+          <mark>
+          <nav>
+          <section>
+          <summary>
+          <time>
+
+2.Position concept in css?
+
+    #The position property specifies the type of positioning method used for an element.
+
+    #There are five different position values:
+
+         *static
+         *relative
+         *fixed
+         *absolute
+         *sticky
+3. Display inline and inline block difference?
+
+INLINE:
+           * display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+
+INLINE-BLOCK:
+
+           *display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+
+4.What is the use of doctype HTML?
+
+            *All HTML documents must start with a <!DOCTYPE> declaration.
+
+5.Purpose of meta tag?
+
+             # The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
+	
+	* <meta charset="UTF-8"> - Specifies the character encoding for the HTML document
+
+	* <meta name="viewport" content="width=device-width, initial-scale=1.0"> - Specifies a name for the metadata
+
+6. Without using css how can I separate span tag in block?
+
+      The span tag is just like a div, which is used to group similar content so it can all be styled together. But span is different in that it is an inline element, as opposed to div, which is a block element.	
+	using <br> tag to sepate the concept.
+
+7.Difference between psuedo class and psuedo elements?
+
+      Pseudo-Class
+               *A pseudo-class represents a state of a selector 
+examples:
+:active	a:active	Selects the active link
+:checked	input:checked	Selects every checked <input> element
+:disabled	input:disabled	Selects every disabled <input> element
+:empty	p:empty	Selects every <p> element that has no children
+:enabled	input:enabled	Selects every enabled <input> element
+:first-child	p:first-child	Selects every <p> elements that is the first child of its parent
+:first-of-type	p:first-of-type	Selects every <p> element that is the first <p> element of its parent
+:focus	input:focus	Selects the <input> element that has focus
+:hover	a:hover	Selects links on mouse over
+
+:invalid	input:invalid	Selects all <input> elements with an invalid value
+
+:last-child	p:last-child	Selects every <p> elements that is the last child of its parent
+
+:link	a:link	Selects all unvisited links
+
+:nth-child(n)	p:nth-child(2)	Selects every <p> element that is the second child of its parent
+
+:nth-last-child(n)	p:nth-last-child(2)	Selects every <p> element that is the second child of its parent, counting from the last child
+
+
+:nth-of-type(n)	p:nth-of-type(2)	Selects every <p> element that is the second <p> element of its parent
+
+:only-child	p:only-child	Selects every <p> element that is the only child of its parent
+
+:out-of-range	input:out-of-range	Selects <input> elements with a value outside a specified range
+
+:read-write	input:read-write	Selects <input> elements with no "readonly" attribute
+
+:root	root	Selects the document's root element
+
+:valid	input:valid	Selects all <input> elements with a valid value
+
+:visited	a:visited	Selects all visited links
+
+PSEUDO ELEMENT:
+
+       *Similarly, a pseudo-element is used to select virtual elements
+
+::after	p::after	Insert content after every <p> element
+
+::before	p::before	Insert content before every <p> element
+
+::first-letter	p::first-letter	Selects the first letter of every <p> element
+
+::first-line	p::first-line	Selects the first line of every <p> element
+
+::selection	p::selection	Selects the portion of an element that is selected by a user
+
+8. Iteration properties?
+
+           *Loops allow programs to perform repetitive tasks, such as iterating through an array, while adhering to the DRY principle (Don't Repeat Yourself).
+            They come in handy when you want to execute a function a number of times, using different sets of inputs each time.
+
+9.Use of svg and canvas?
+
+          * SVG gives better performance with smaller number of objects or larger surface. 
+	  * Canvas gives better performance with smaller surface or larger number of objects.
+
+10.Media querries?
+
+          * Media queries are a popular technique for delivering a tailored style sheet to different devices. To demonstrate a simple example,
+           we can change the background color for different devices
+
+11.Orientation?
+
+      	*The orientation feature is specified as a keyword value chosen from the list below.
+	
+	HTML
+	<div>Box 1</div>
+	<div>Box 2</div>
+	<div>Box 3</div>
+
+	CSS
+	body
+	{
+	  	display: flex;
+	}
+
+	div
+	 {
+ 	 	background: yellow;
+	}
+
+	@media (orientation: landscape) 
+	{
+  		body 
+		{
+    			flex-direction: row;
+  		}
+	}
+
+	@media (orientation: portrait) 
+	{
+  		body 
+		{
+    			flex-direction: column;
+  		}
+	}
+
+12. Set time out and set interval difference?
+      *The setInterval() method calls a function at specified intervals (in milliseconds). The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.
+	
+	1 second = 1000 milliseconds.
+
+	<script>
+		const element = document.getElementById("demo");
+		setInterval(function() {element.innerHTML += "Hello"}, 1000);
+	</script>
+
+     *The setTimeout() method calls a function after a number of milliseconds.
+
+	1 second = 1000 milliseconds.
+
+	<script>
+		const myTimeout = setTimeout(myGreeting, 5000);
+	
+		function myGreeting() 
+		{
+  			document.getElementById("demo").innerHTML = "Happy Birthday!"
+		}
+
+		function myStopFunction() 
+		{
+  			clearTimeout(myTimeout);
+		}
+	</script>
+
+13. box model?
+            
+             *In CSS, the term "box model" is used when talking about design and layout. The CSS box model is essentially a box that wraps around every HTML element. 
+        	It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
+
+	#Content - The content of the box, where text and images appear
+	#Padding - Clears an area around the content. The padding is transparent
+	#Border - A border that goes around the padding and content
+	#Margin - Clears an area outside the border. The margin is transparent
+
+14. Attribute?
+
+   *All HTML elements can have attributes
+   *Attributes provide additional information about elements
+   *Attributes are always specified in the start tag
+   *Attributes usually come in name/value pairs like: name="value"
+EXAMPLES:
+		
+	Id -	The id attribute of an HTML tag can be used to uniquely identify any element within an HTML page.
+	Title - 	The title attribute gives a suggested title for the element. 
+		<body>
+      			<h3 title = "Hello HTML!">Titled Heading Tag Example</h3>
+  		 </body>
+	Class - 	The class attribute is used to associate an element with a style sheet, and specifies the class of element.
+	Style - 	The style attribute allows you to specify Cascading Style Sheet (CSS) rules within the element.
+
+15.use of default (reset)css?
+
+        *A CSS Reset style sheet is a list of rules that 'reset' all of the default browser styles. We reset the browser styles for two primary reasons: 
+	Not all browsers apply the same default rules. They may be similar, but not exact.
+
+16. in span tag i give width: 50px; padding: 5px; margin: 5px; now calculate width?
+
+	*width does not work
