@@ -1,0 +1,241 @@
+1. What is semantic tag Eg?
+
+	A semantic element clearly describes its meaning to both the browser and the developer.
+
+	Eg.
+
+		article - The article element specifies independent, self-contained content.
+
+		aside - The aside element defines some content aside from the content it is placed in (like a sidebar).
+
+		detail - Defines additional details that the user can view or hide
+
+		figcaption - The figcaption element can be placed as the first or as the last child of a <figure> element.
+
+		figure - The figure tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+
+		footer - The footer element defines a footer for a document or section.
+
+		header - The header element represents a container for introductory content or a set of  navigational links.
+
+		main - Specifies the main content of a document
+
+		mark  - Defines marked/highlighted text
+
+		nav - The nav element defines a set of navigation links.
+
+		section - The section element defines a section in a document.
+
+		summary - Defines a visible heading for a <details> element
+
+		time - Defines a date/time
+
+2. position Concept in Css?
+	
+	The position property specifies the type of positioning method used for an element.
+	
+	There are five different position values:
+
+		static - 		Static positioned elements are not affected by the top, bottom, left, and right properties.
+
+		relative - 	An element with position: relative; is positioned relative to its normal position.
+
+		fixed -		An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left 					properties are used to 	position the element.
+
+		absolute -  	An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+
+		sticky - 		A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place 				(like position:fixed).
+
+3. Display inline and inline block difference.
+
+	block - A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+	
+	inline - An inline element does not start on a new line.
+
+4. What is the use of doctype HTML?
+
+	All HTML documents must start with a <!DOCTYPE> declaration. The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect.
+
+5. Purpose of meta tag.
+
+	The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
+	
+	 <meta charset="UTF-8"> - Specifies the character encoding for the HTML document
+
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> - Specifies a name for the metadata
+6. Without using css how can I separate span tag in block .
+
+	The span tag is just like a div, which is used to group similar content so it can all be styled together. But span is different in that it is an inline element, as opposed to div, which is a block element.	
+	using <br> tag to sepate the concept.
+
+7. Difference between psuedo class and psuedo elements.
+
+	A CSS pseudo-element is used to style specified parts of an element.
+
+		Style the first letter, or line, of an element
+		Insert content before, or after, the content of an element
+
+		::after		p::after		Insert something after the content of each <p> element
+		::before		p::before	Insert something before the content of each <p> element
+		::first-letter	p::first-letter	Selects the first letter of each <p> element
+		::first-line	p::first-line	Selects the first line of each <p> element
+		::marker	::marker	Selects the markers of list items
+		::selection	p::selection	Selects the portion of an element that is selected by a user
+
+	A pseudo-class is used to define a special state of an element.
+
+	Style an element when a user mouses over it
+	Style visited and unvisited links differently
+	Style an element when it gets focus
+
+	:active	a:active	Selects the active link
+
+	:checked	input:checked	Selects every checked <input> element
+
+	:disabled	input:disabled	Selects every disabled <input> element
+
+	:empty		p:empty	Selects every <p> element that has no children
+	
+	:first-child	p:first-child	Selects every <p> elements that is the first child of its parent
+	
+	:focus		input:focus	Selects the <input> element that has focus
+
+	:hover		a:hover		Selects links on mouse over
+	
+	
+	:last-child		p:last-child		Selects every <p> elements that is the last child of its parent
+	
+	:link			a:link			Selects all unvisited links
+	
+	:nth-child(n)		p:nth-child(2)		Selects every <p> element that is the second child of its parent
+
+	:nth-last-child(n)	p:nth-last-child(2)	Selects every <p> element that is the second child of its parent, counting from the last child
+	
+	:read-only		input:read-only		Selects <input> elements with a "readonly" attribute specified
+
+	:read-write		input:read-write	Selects <input> elements with no "readonly" attribute
+	
+	:root			root			Selects the document's root element
+
+	:target			#news:target		Selects the current active #news element (clicked on a URL containing that anchor name)
+
+	:valid			input:valid		Selects all <input> elements with a valid value
+
+	:visited			a:visited		Selects all visited links
+
+8. Iteration properties.
+
+	Loops allow programs to perform repetitive tasks, such as iterating through an array, while adhering to the DRY principle (Don't Repeat Yourself). They come in handy when you want to execute a function a number of times, using different sets of inputs each time.
+
+9. Use of svg and canvas
+
+	SVG gives better performance with smaller number of objects or larger surface. 
+	Canvas gives better performance with smaller surface or larger number of objects.
+
+10. Media querries
+
+	Media queries in CSS3 extended the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device.
+
+	Media queries can be used to check many things, such as:
+
+	width and height of the viewport
+	width and height of the device
+	orientation (is the tablet/phone in landscape or portrait mode?)
+	resolution
+
+11. Orientation
+	
+	The orientation feature is specified as a keyword value chosen from the list below.
+	
+	HTML
+	<div>Box 1</div>
+	<div>Box 2</div>
+	<div>Box 3</div>
+
+	CSS
+	body
+	{
+	  	display: flex;
+	}
+
+	div
+	 {
+ 	 	background: yellow;
+	}
+
+	@media (orientation: landscape) 
+	{
+  		body 
+		{
+    			flex-direction: row;
+  		}
+	}
+
+	@media (orientation: portrait) 
+	{
+  		body 
+		{
+    			flex-direction: column;
+  		}
+	}
+
+12. Set time out and set interval difference
+
+	The setInterval() method calls a function at specified intervals (in milliseconds). The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.
+	
+	1 second = 1000 milliseconds.
+
+	<script>
+		const element = document.getElementById("demo");
+		setInterval(function() {element.innerHTML += "Hello"}, 1000);
+	</script>
+
+	The setTimeout() method calls a function after a number of milliseconds.
+
+	1 second = 1000 milliseconds.
+
+	<script>
+		const myTimeout = setTimeout(myGreeting, 5000);
+	
+		function myGreeting() 
+		{
+  			document.getElementById("demo").innerHTML = "Happy Birthday!"
+		}
+
+		function myStopFunction() 
+		{
+  			clearTimeout(myTimeout);
+		}
+	</script>
+
+13. box model
+
+	In CSS, the term "box model" is used when talking about design and layout. The CSS box model is essentially a box that wraps around every HTML element. 
+	It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
+
+	Content - The content of the box, where text and images appear
+	Padding - Clears an area around the content. The padding is transparent
+	Border - A border that goes around the padding and content
+	Margin - Clears an area outside the border. The margin is transparent
+
+14. Attribute
+	
+	Html attributes
+			
+	Id -	The id attribute of an HTML tag can be used to uniquely identify any element within an HTML page.
+	Title - 	The title attribute gives a suggested title for the element. 
+		<body>
+      			<h3 title = "Hello HTML!">Titled Heading Tag Example</h3>
+  		 </body>
+	Class - 	The class attribute is used to associate an element with a style sheet, and specifies the class of element.
+	Style - 	The style attribute allows you to specify Cascading Style Sheet (CSS) rules within the element.
+15 . Use of default (reset) css
+
+	A CSS Reset style sheet is a list of rules that 'reset' all of the default browser styles. We reset the browser styles for two primary reasons: 
+	Not all browsers apply the same default rules. They may be similar, but not exact.
+	
+16. in span tag i give width: 50px; padding: 5px; margin: 5px;
+
+now calculate width.
+
+	width  not work.
